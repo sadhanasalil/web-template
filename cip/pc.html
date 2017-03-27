@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    <body>
+            <center><font size="30" color="blue"><span id="date_time"></span></center></font>
+            <script type="text/javascript">window.onload = date_time('date_time');
+function date_time(id)
+{
+        date = new Date;
+        year = date.getFullYear();
+        month = date.getMonth();
+        months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+        d = date.getDate();
+        day = date.getDay();
+        days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+        h = date.getHours();
+        if(h<10)
+        {
+                h = "0"+h;
+        }
+        m = date.getMinutes();
+        if(m<10)
+        {
+                m = "0"+m;
+        }
+        s = date.getSeconds();
+        if(s<10)
+        {
+                s = "0"+s;
+         }
+if((s-1)%10==0)
+s=01;
+if((s-2)%10==0)
+s=02;
+if((s-3)%10==0)
+s=03;
+if((s-4)%10==0)
+s=04;
+if((s-5)%10==0)
+s=05;
+if((s-6)%10==0)
+s=06;
+if((s-7)%10==0)
+s=07;
+if((s-8)%10==0)
+s=08;
+if((s-9)%10==0)
+s=09;
+if((s-10)%10==0)
+s=10;
+
+        result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m+':'+s;
+          result1=s;
+        document.getElementById(id).innerHTML = result1;
+        setTimeout('date_time("'+id+'");','1000');
+        return true;
+}</script>
+    </body>
+
+<svg width="1500" height="1500" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+<!--
+1-->
+<rect x="100" y="200" width="100" height="70" rx="7" ry="7" stroke="black" fill="transparent" stroke-width="5"/>
+<rect x="135" y="270" width="30" height="15" stroke="black" fill="transparent" stroke-width="5"/>
+<rect x="115" y="290" width="70" height="6" rx="2" ry="2" stroke="black" fill="black" stroke-width="5"/>
+<path d="M93,299 L86,315 L210,315 L200,299" fill="white" stroke="black" stroke-width="3"/>
+<path d="M200,299 L93,299" fill="white" stroke="grey" stroke-width="2" opacity="0.5"/>
+<rect x="220" y="301" width="10" height="7" rx="2" ry="2" stroke="black" fill="black" stroke-width="5"/>
+<rect x="10" y="205" width="45" height="102" rx="4" ry="4" stroke="black" fill="none" stroke-width="5"/>
+<rect x="8" y="245" width="49" height="50" rx="2" ry="2" stroke="black" fill="black" stroke-width="5"/>
+<path d="M10,215 L55,215" fill="black" stroke="black" stroke-width="2"/>
+<path d="M10,225 L55,225" fill="none" stroke="black" stroke-width="2"/>
+<path d="M10,235 L55,235" fill="none" stroke="black" stroke-width="2"/>
+<path d="M185,290 C220,290,225,310,225,310" fill="none" stroke="black" stroke-width="2"/>
+
+<!--
+2-->
+<rect x="1000" y="200" width="100" height="70" rx="7" ry="7" stroke="black" fill="transparent" stroke-width="5"/>
+<rect x="1035" y="270" width="30" height="15" stroke="black" fill="transparent" stroke-width="5"/>
+<rect x="1015" y="290" width="70" height="6" rx="2" ry="2" stroke="black" fill="black" stroke-width="5"/>
+<path d="M993,299 L986,315 L1110,315 L1100,299" fill="white" stroke="black" stroke-width="3"/>
+<path d="M1100,299 L1093,299" fill="white" stroke="grey" stroke-width="2" opacity="0.5"/>
+<rect x="1120" y="301" width="10" height="7" rx="2" ry="2" stroke="black" fill="black" stroke-width="5"/>
+<rect x="1150" y="205" width="45" height="102" rx="4" ry="4" stroke="black" fill="none" stroke-width="5"/>
+<rect x="1148" y="245" width="49" height="50" rx="2" ry="2" stroke="black" fill="black" stroke-width="5"/>
+<path d="M1150,215 L1195,215" fill="black" stroke="black" stroke-width="2"/>
+<path d="M1150,225 L1195,225" fill="none" stroke="black" stroke-width="2"/>
+<path d="M1150,235 L1195,235" fill="none" stroke="black" stroke-width="2"/>
+<path d="M1085,290 C1120,290,1125,310,1125,310" fill="none" stroke="black" stroke-width="2"/>
+
+<text x="530" y="50" font-size="20" stroke="green" visibility="visible" >CASE:1 LOSSLESS TRANSMISSION
+
+<animate id="animation1" attributeName="visibility" from="visible" to="hidden" dur="40s" begin="1s" fill="freeze" repeatCount="0"/>
+</text>
+
+<text x="460" y="50" font-size="20" id="text1" visibility="hidden" stroke="green" >CASE:2 PACKET LOSS TRANSMISSION
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="30s" begin="7" /></text>
+
+<text x="410" y="50" font-size="20" id="text1" visibility="hidden" stroke="green" >CASE:3 ACKNOWLEDGEMENT LOSS TRANSMISSION
+<animate id="animation3" attributeName="visibility" from="hidden" to="visible"  dur="60s" begin="33" /></text>
+
+<text x="500" y="50" font-size="20" id="text1" visibility="hidden" stroke="green" >CASE:4 TIMEOUT TRANSMISSION
+<animate id="animation4" attributeName="visibility" from="hidden" to="visible"  dur="60s" begin="75" /></text>
+<text x="480" y="450" font-size="20" stroke="red">Status:</text>
+<text x="550" y="450" font-size="20"  visibility="hidden" stroke="purple" >Packet Transmission
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="10s" begin="1s" /></text>
+
+<text x="550" y="450" font-size="20"  visibility="hidden" stroke="purple" >Acknowledgement Sent
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="10s" begin="11s" /></text>
+
+<text x="550" y="450" font-size="20"  visibility="hidden" stroke="purple" >Packet loss
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="10s" begin="21s" /></text>
+
+<text x="550" y="450" font-size="20"  visibility="hidden" stroke="purple" >Packet Resent
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="10s" begin="35s" /></text>
+<text x="550" y="450" font-size="20"  visibility="hidden" stroke="purple" >Acknowledgement Sent
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="10s" begin="46s" /></text>
+<text x="550" y="450" font-size="20"  visibility="hidden" stroke="purple" >Acknowledgement Loss
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="10s" begin="66s" /></text>
+<text x="550" y="450" font-size="20"  visibility="hidden" stroke="purple" >Packet sent
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="10s" begin="56s" /></text>
+<text x="550" y="450" font-size="20"  visibility="hidden" stroke="purple" >Packet Retransmit
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="10s" begin="76s" /></text>
+<text x="550" y="450" font-size="20"  visibility="hidden" stroke="purple" >Acknowledgement Sent
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="10s" begin="86s" /></text>
+<text x="550" y="450" font-size="20"  visibility="hidden" stroke="purple" >Packet Sent
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="10s" begin="96s" /></text>
+<text x="550" y="450" font-size="20"  visibility="hidden" stroke="purple" >Acknowledgement received after timeout
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="10s" begin="109s" /></text>
+<text x="550" y="450" font-size="20"  visibility="hidden" stroke="purple" >Packet Retransmit
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="10s" begin="119s" /></text>
+<text x="550" y="450" font-size="20"  visibility="hidden" stroke="purple" >Acknowledgement Sent
+<animate id="animation2" attributeName="visibility" from="hidden" to="visible"  dur="10s" begin="129s" /></text>
+<path d="M1060,95 L1080,110 1120,70 1103,70 1077,95 1060,80 1060,95" fill="green" visibility="hidden">
+<animate  attributeName="visibility" from="hidden" to="visible"  dur="3s" begin="7s" /></path>
+<path d="M160,95 L180,110 220,70 203,70 177,95 160,80 160,95" fill="green" visibility="hidden">
+<animate  attributeName="visibility" from="hidden" to="visible"  dur="3s" begin="17s" /></path>
+<path d="M530,180 L570,230 580,230 540,180 530,180 M580,180 L540,230 530,230 570,180" fill="red" visibility="hidden"> 
+<animate  attributeName="visibility" from="hidden" to="visible"  dur="3s" begin="26s" /></path>
+<path d="M1060,95 L1080,110 1120,70 1103,70 1077,95 1060,80 1060,95" fill="green" visibility="hidden">
+<animate  attributeName="visibility" from="hidden" to="visible"  dur="3s" begin="47s" /></path>
+<path d="M160,95 L180,110 220,70 203,70 177,95 160,80 160,95" fill="green" visibility="hidden">
+<animate  attributeName="visibility" from="hidden" to="visible"  dur="3s" begin="57s" /></path>
+<path d="M1060,95 L1080,110 1120,70 1103,70 1077,95 1060,80 1060,95" fill="green" visibility="hidden">
+<animate  attributeName="visibility" from="hidden" to="visible"  dur="3s" begin="67s" /></path>
+<path d="M530,180 L570,230 580,230 540,180 530,180 M580,180 L540,230 530,230 570,180" fill="red" visibility="hidden"> 
+<animate  attributeName="visibility" from="hidden" to="visible"  dur="3s" begin="77s" /></path>
+<path d="M1060,95 L1080,110 1120,70 1103,70 1077,95 1060,80 1060,95" fill="green" visibility="hidden">
+<animate  attributeName="visibility" from="hidden" to="visible"  dur="3s" begin="87s" /></path>
+<path d="M160,95 L180,110 220,70 203,70 177,95 160,80 160,95" fill="green" visibility="hidden">
+<animate  attributeName="visibility" from="hidden" to="visible"  dur="3s" begin="97s" /></path>
+<path d="M1060,95 L1080,110 1120,70 1103,70 1077,95 1060,80 1060,95" fill="green" visibility="hidden">
+<animate  attributeName="visibility" from="hidden" to="visible"  dur="3s" begin="107s" /></path>
+<path d="M130,80 L170,130 180,130 140,80 130,80 M180,80 L140,130 130,130 170,80" fill="red" visibility="hidden"> 
+<animate  attributeName="visibility" from="hidden" to="visible"  dur="5s" begin="121s" /></path>
+<path d="M1060,95 L1080,110 1120,70 1103,70 1077,95 1060,80 1060,95" fill="green" visibility="hidden">
+<animate  attributeName="visibility" from="hidden" to="visible"  dur="3s" begin="128s" /></path>
+<path d="M160,95 L180,110 220,70 203,70 177,95 160,80 160,95" fill="green" visibility="hidden">
+<animate  attributeName="visibility" from="hidden" to="visible"  dur="3s" begin="138s" /></path>
+
+<g>
+<rect x="210" y="200" width="20" height="40"  fill="red" stroke-width="0" visibility="visible"/>
+<animateTransform
+    attributeName="transform"
+    from="0 0"
+    to="850 0"
+    type="translate"
+    begin="1s"
+    dur="9s"
+id="a1"
+/>
+<set attributeName="visibility" from="visible" to="hidden" begin="a1.begin"/>
+</g>
+<rect x="210" y="200" width="20" height="40" stroke="white" fill="white" stroke-width="0"/>
+<g>
+<rect x="1050" y="205" width="20" height="40"  fill="yellow" stroke-width="0"/>
+<animateTransform
+    attributeName="transform"
+    from="0 0"
+    to="-850 0"
+    type="translate"
+    begin="10s"
+   dur="10s"
+repeatcount="0"
+/>
+</g>
+
+<rect x="1050" y="205" width="20" height="40" stroke="white" fill="white" stroke-width="0"/>
+<!--*****************case2*************************-->
+<g>
+<rect x="210" y="200" width="20" height="40"  fill="red" stroke-width="0" visibility="visible"/>
+<animateTransform
+    attributeName="transform"
+    from="0 0"
+    to="400 0"
+    type="translate"
+    begin="21s"
+    dur="8s"
+id="a1"
+/>
+<set attributeName="visibility" from="visible" to="hidden" begin="a1.begin"/>
+</g>
+<rect x="210" y="200" width="20" height="40" stroke="white" fill="white" stroke-width="0"/>
+<g>
+<rect x="210" y="200" width="20" height="40"  fill="red" stroke-width="0" visibility="visible"/>
+<animateTransform
+    attributeName="transform"
+    from="0 0"
+    to="850 0"
+    type="translate"
+    begin="41s"
+    dur="10s"
+id="a1"
+/>
+<set attributeName="visibility" from="visible" to="hidden" begin="a1.begin"/>
+</g>
+<rect x="210" y="200" width="20" height="40" stroke="white" fill="white" stroke-width="0"/>
+
+<g>
+<rect x="1050" y="205" width="20" height="40"  fill="yellow" stroke-width="0"/>
+<animateTransform
+    attributeName="transform"
+    from="0 0"
+    to="-850 0"
+    type="translate"
+    begin="51s"
+    dur="10s"
+repeatcount="0"
+/>
+</g>
+<rect x="1050" y="205" width="20" height="40" stroke="white" fill="white" stroke-width="0"/>
+<!--------------case3------------------>
+<g>
+<!--<text x="500" y="50" font-size="20" delay="2s">CASE:1 LOSSLESS TRANSMISSION</text>
+<animate attributeType="CSS" attributeName="opacity" 
+           from="1" to="0" dur="10s" repeatCount="0">-->
+</g>
+<g>
+<rect x="210" y="200" width="20" height="40"  fill="red" stroke-width="0" visibility="visible"/>
+<animateTransform
+    attributeName="transform"
+    from="0 0"
+    to="850 0"
+    type="translate"
+    begin="61s"
+    dur="10s"
+id="a1"
+/>
+</g>
+<rect x="210" y="200" width="20" height="40" stroke="white" fill="white" stroke-width="0"/>
+<g>
+<rect x="1050" y="205" width="20" height="40"  fill="yellow" stroke-width="0"/>
+<animateTransform
+    attributeName="transform"
+    from="0 0"
+    to="-450 0"
+    type="translate"
+    begin="71s"
+    dur="10s"
+repeatcount="0"
+/>
+</g>
+<rect x="1050" y="205" width="20" height="40" stroke="white" fill="white" stroke-width="0"/>
+<g>
+<rect x="210" y="200" width="20" height="40"  fill="red" stroke-width="0" visibility="visible"/>
+<animateTransform
+    attributeName="transform"
+    from="0 0"
+    to="850 0"
+    type="translate"
+    begin="81s"
+    dur="10s"
+id="a1"
+/>
+<set attributeName="visibility" from="visible" to="hidden" begin="a1.begin"/>
+</g>
+<rect x="210" y="200" width="20" height="40" stroke="white" fill="white" stroke-width="0"/>
+<g>
+<rect x="1050" y="205" width="20" height="40"  fill="yellow" stroke-width="0"/>
+<animateTransform
+    attributeName="transform"
+    from="0 0"
+    to="-850 0"
+    type="translate"
+    begin="91s"
+    dur="10s"
+repeatcount="0"
+/>
+</g>
+<rect x="1050" y="205" width="20" height="40" stroke="white" fill="white" stroke-width="0"/>
+
+<!--------------case4------------------>
+<g>
+<!--<text x="500" y="50" font-size="20" delay="2s">CASE:1 LOSSLESS TRANSMISSION</text>
+<animate attributeType="CSS" attributeName="opacity" 
+           from="1" to="0" dur="10s" repeatCount="0">-->
+</g>
+<g>
+<rect x="210" y="200" width="20" height="40"  fill="red" stroke-width="0" visibility="visible"/>
+<animateTransform
+    attributeName="transform"
+    from="0 0"
+    to="850 0"
+    type="translate"
+    begin="101s"
+    dur="10s"
+id="a1"
+/>
+<set attributeName="visibility" from="visible" to="hidden" begin="a1.begin"/>
+</g>
+<rect x="210" y="200" width="20" height="40" stroke="white" fill="white" stroke-width="0"/>
+<g>
+<rect x="1050" y="205" width="20" height="40"  fill="yellow" stroke-width="0"/>
+<animateTransform
+    attributeName="transform"
+    from="0 0"
+    to="-850 0"
+    type="translate"
+    begin="111s"
+    dur="15s"
+repeatcount="0"
+/>
+</g>
+<rect x="1050" y="205" width="20" height="40" stroke="white" fill="white" stroke-width="0"/>
+<g>
+<rect x="210" y="200" width="20" height="40"  fill="red" stroke-width="0" visibility="visible"/>
+<animateTransform
+    attributeName="transform"
+    from="0 0"
+    to="850 0"
+    type="translate"
+    begin="121s"
+    dur="10s"
+id="a1"
+/>
+<set attributeName="visibility" from="visible" to="hidden" begin="a1.begin"/>
+</g>
+<rect x="210" y="200" width="20" height="40" stroke="white" fill="white" stroke-width="0"/>
+<g>
+<rect x="1050" y="205" width="20" height="40"  fill="yellow" stroke-width="0"/>
+<animateTransform
+    attributeName="transform"
+    from="0 0"
+    to="-850 0"
+    type="translate"
+    begin="131s"
+    dur="10s"
+repeatcount="0"
+/>
+</g>
+<rect x="1050" y="205" width="20" height="40" stroke="white" fill="white" stroke-width="0"/>
+</svg>
+</html>

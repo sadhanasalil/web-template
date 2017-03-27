@@ -1,0 +1,29 @@
+<?php
+$link=mysqli_connect("localhost","root","","project");
+if($link===false)
+{
+die("couldnot connnect".mysqli_connect_error());
+}
+
+
+$sql="select * from employee"; 
+$str ="<chart subcaption='Sudent average Statistics' xaxisname='name' yaxisname='mark' numberprefix='$' palettecolors='#008ee4' bgalpha='0' borderalpha='20' canvasborderalpha='0' useplotgradientcolor='0' plotborderalpha='10' placevaluesinside='1' rotatevalues='1' valuefontcolor='#ffffff' captionpadding='20' showaxislines='1' axislinealpha='25' divlinealpha='10'>\n";
+
+
+if($res=mysqli_query($link,$sql))
+{
+if(mysqli_num_rows($res)>0)
+{
+while($row=mysqli_fetch_array($res))
+{
+$str .= "<set label='".$row['Emp_name']."' value='".$row['Salary']."' />";
+}}}
+$str.= "</chart>";
+//$str=nl2br($str);
+//echo htmlspecialchars($str); // remove this line if you are writing to file
+//echo $str;
+echo "XML file is rendered successfully!!..";
+$file_name="employee.xml"; // file name
+$fp = fopen ($file_name, "w"); 
+fwrite ($fp,$str); fclose ($fp); chmod($file_name,0777); 
+?>

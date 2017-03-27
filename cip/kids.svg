@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="paleturquoise">
+<center><font size="24" color="green" >KIDS PLAY</font></center>
+<svg width="1500" height="1500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<!--<script type="text/ecmascript"><![CDATA[function move(){-->
+<g>
+<path d="M515,73 C515,50 600,50 600,76 C630,86 640,100 630,110 C650,120 660,140 630,140 C640,160 520,160 520,140 C520,150 480,150 480,140 C470,150 450,105 480,100 C475,90 495,75 515,75" fill="honeydew" stroke="white" stroke-width="6px">
+
+<animateMotion dur="1s" repeatCount="indefinite"
+   path="m 0,0 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z" />
+<animateTransform
+    attributeName="transform"
+    from="1700 23"
+    to="-500"
+    type="translate"
+    begin="-5s"
+    dur="15s"
+    repeatCount="indefinite"
+/>
+</g>
+<g>
+<path d="M515,173 C515,150 600,150 600,176 C630,186 640,200 630,210 C650,220 660,240 630,240 C640,260 520,260 520,240 C520,250 480,250 480,240 C470,250 450,205 480,200 C475,190 495,175 515,175" fill="snow" stroke="white" stroke-width="6px">
+
+<animateMotion dur="1s" repeatCount="indefinite"
+   path="m 0,0 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z" />
+<animateTransform
+    attributeName="transform"
+    from="1700 125"
+    to="-500"
+    type="translate"
+    begin="-5s"
+    dur="13s"
+    repeatCount="indefinite"
+/>
+</g>
+
+<g>
+<path d="M215,273 C215,250 300,250 300,276 C330,286 340,300 330,310 C350,320 360,340 330,340 C340,360 220,360 220,340 C220,350 180,350 180,340 C170,350 150,305 180,300 C175,290 195,275 215,275" fill="white" stroke="white" stroke-width="6px">
+
+<animateMotion dur="1s" repeatCount="indefinite"
+   path="m 0,0 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z" />
+<animateTransform
+    attributeName="transform"
+    from="1700 123"
+    to="-500"
+    type="translate"
+    begin="-5s"
+    dur="10s"
+    repeatCount="indefinite"
+/>
+</g>
+<g>
+<path d="M815,273 C815,250 900,250 900,276 C930,286 940,300 930,310 C950,320 960,340 930,340 C940,360 820,360 820,340 C820,350 780,350 780,340 C770,350 750,305 780,300 C775,290 795,275 815,275" fill="snow" stroke="white" stroke-width="6px">
+
+<animateMotion dur="1s" repeatCount="indefinite"
+   path="m 0,0 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z" />
+<animateTransform
+    attributeName="transform"
+    from="1700 123"
+    to="-500"
+    type="translate"
+    begin="-5s"
+    dur="15s"
+    repeatCount="indefinite"
+/>
+</g>
+
+<g>
+<path d="M515,873 C515,850 600,850 600,876 C630,886 640,900 630,910 C650,920 660,940 630,940 C640,960 520,960 520,940 C520,950 480,950 480,940 C470,950 450,905 480,900 C475,890 495,875 515,875" fill="honeydew" stroke="white" stroke-width="6px">
+
+<animateMotion dur="1s" repeatCount="indefinite"
+   path="m 0,0 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z" />
+<animateTransform
+    attributeName="transform"
+    from="1700 123"
+    to="-500"
+    type="translate"
+    begin="-5s"
+    dur="15s"
+    repeatCount="indefinite"
+/>
+</g>
+<g>
+<path d="M515,273 C515,250 600,250 600,276 C630,286 640,300 630,310 C650,320 660,340 630,340 C640,360 520,360 520,340 C520,350 480,350 480,340 C470,350 450,305 480,300 C475,290 495,275 515,275" fill="white" stroke="white" stroke-width="6px">
+
+<animateMotion dur="1s" repeatCount="indefinite"
+   path="m 0,0 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z" />
+<animateTransform
+    attributeName="transform"
+    from="1700 150"
+    to="-500"
+    type="translate"
+    begin="-5s"
+    dur="11s"
+    repeatCount="indefinite"
+/>
+
+</g>
+<g>
+<path d="M515,73 C515,50 600,50 600,76 C630,86 640,100 630,110 C650,120 660,140 630,140 C640,160 520,160 520,140 C520,150 480,150 480,140 C470,150 450,105 480,100 C475,90 495,75 515,75" fill="honeydew" stroke="white" stroke-width="6px">
+
+<animateMotion dur="1s" repeatCount="indefinite"
+   path="m 0,0 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z" />
+<animateTransform
+    attributeName="transform"
+    from="1700 200"
+    to="-500"
+    type="translate"
+    begin="-5s"
+    dur="9s"
+    repeatCount="indefinite"
+/>
+</g>
+<g>
+<path d="M515,523 C515,500 600,500 600,526 C630,536 640,550 630,560 C650,570 660,590 630,590 C640,610 520,610 520,590 C520,600 480,600 480,590 C470,600 450,555 480,550 C475,540 495,525 515,525" fill="white" stroke="white" stroke-width="6px">
+<animateMotion dur="1s" repeatCount="indefinite"
+   path="m 0,0 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z" />
+<animateTransform
+    attributeName="transform"
+    from="1700 200"
+    to="-500"
+    type="translate"
+    begin="-5s"
+    dur="9s"
+    repeatCount="indefinite"
+/>
+</g>
+
+
+<g>
+	<path d="M100,200
+           C100,100  180,100  230,200"
+   fill="red" stroke="red" stroke-width="2px" />
+<path d="M100 200 L100 290 L190 290 C205,290 205,275 205,275 L205 275 L205 200 Z"
+   fill="red" stroke="red" stroke-width="2px" />
+<path d="M135,210
+           C135,250  190,250  190,210"
+   fill="red" stroke="red" stroke-width="2px" />
+<path fill="white">
+<animate attributeName="d" dur="2s" repeatCount="indefinite"
+values="M135,210
+           C110,290  170,290  190,210;
+M135,210
+           C135,250  190,250  190,210 "/>
+</path>
+
+<circle cx="142" cy="170" r="22" stroke="yellow" fill="yellow" ></circle>
+
+<circle cx="142" cy="170" r="10" >
+	<animate dur="3s" attributeName="r" values="10; 14; 10"
+	repeatCount="indefinite" /></circle>
+<circle cx="193" cy="170" r="18" stroke="yellow" fill="yellow" ></circle>
+<circle cx="193" cy="170" r="8" >
+	<animate dur="3s" attributeName="r" values="8; 12; 8"
+	repeatCount="indefinite" /></circle>
+<g>
+<circle cx="145" cy="170" r="3" stroke="white" fill="white"></circle>
+<circle cx="195" cy="170" r="3" stroke="white" fill="white"></circle>
+
+   <animateMotion dur="1s" repeatCount="indefinite"
+   path="m 0,0 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z" />
+</g>
+<animateTransform  calcMode="spline"
+  dur="3s" attributeName="transform"
+  type="rotate" repeatCount="indefinite"
+  keySplines="0.35 0 0.65 1; 0.35 0 0.65 1"
+values="2,0,2;-2,0,-2;2,0,2" />
+
+</g>
+<g> 
+
+<path d="M150,310 C20,310 20,350 150,350 C150,353 200,353 200,350 C350,350 350,307 200,310 C200,307 150,307 150,310" fill="deepskyblue" stroke="aqua"/>
+<circle cx="90" cy="330" r="14" stroke="black" fill="black"></circle>
+<circle cx="90" cy="330" r="10" stroke="white" fill="white"></circle>
+<circle cx="280" cy="330" r="14" stroke="red" fill="red"></circle>
+<circle cx="280" cy="330" r="10" stroke="black" fill="black"></circle>
+
+  <animateTransform  calcMode="spline"
+  dur="3s" attributeName="transform"
+  type="rotate" repeatCount="indefinite"
+  keySplines="0.35 0 0.65 1; 0.35 0 0.65 1"
+values="5,0,5;-5,0,-5;5,0,5" />
+<animateTransform  calcMode="spline"
+  dur="3s" attributeName="transform"
+  type="rotate" repeatCount="indefinite"
+  keySplines="0.35 0 0.65 1; 0.35 0 0.65 1"
+values="-5,0,-5;5,0,5;-5,0,-5" />
+  </g>
+<!--}]]></script><image xlink:href='kids.png' onclick='move()' width='300' height='400' x='520' y='150'>-->
+</svg>
+</body>
+</html>

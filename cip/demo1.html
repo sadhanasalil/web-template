@@ -1,0 +1,50 @@
+<html>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+var canvas=document.getElementById("canvas");
+var ctx=canvas.getContext("2d");
+var w=window.innerWidth;
+var h=window.innerHeight;
+canvas.width=w;
+canvas.height=h;
+ctx.beginPath();
+window.onload=function()
+{
+ctx.strokeStyle="red";
+ctx.fillStyle="blue";
+ctx.globalAlpha=0.5;
+var i=0,j=0;
+var x=10;
+var y=100;
+var r=50;
+function draw()
+{
+ctx.clearRect(0,0,w,h);
+ctx.fillRect(x,x,y,r);
+if(i%2==0)
+ctx.scale(2,2);
+else
+ctx.scale(0.5,0.5);
+/*ctx.fillRect(x+10+i,x+10+i,y,r);
+ctx.rotate(4.5);
+ctx.fillRect(x+20+i,x+20+i,y,r);
+ctx.rotate(4.5);
+ctx.fillRect(x+30+i,x+30+i,y,r);
+ctx.rotate(4.5);
+ctx.fillRect(x+40+i,x+40+i,y,r);
+ctx.scale(0.6,0.6);
+ctx.clearRect(0,0,w,h);
+ctx.fillRect(x-j,x-j,y,r);*/
+ctx.arc(300,200,100,0,Math.PI*2,true);
+i=i+1;
+
+}
+setInterval(draw,330);
+ctx.stroke();
+ctx.fill();
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+private void button1_Click(object sender, EventArgs e)
+        {
+          //  con.Open();
+            SqlCommand cmd = new SqlCommand("select * from account where Email_id='" + textBox1.Text + "' and Password='" + textBox2.Text + "'", con);
+            con.Open();
+            SqlDataReader re = cmd.ExecuteReader();
+            //SqlDataReader re = cmd.ExecuteReader();
+            if (re.Read())
+            {
+                MessageBox.Show("Logged in successfully");
+                Form2 frm = new Form2();
+                frm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+            con.Close();
+            textBox1.Text = "";
+            textBox2.Text = "";
+            //textBox3.Text = "";
+           // disp();
+            //MessageBox.Show("Inserted successfully");
+
+        }

@@ -1,0 +1,245 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="floristry.css">
+</head>
+<canvas id="canvas"></canvas>
+
+<body>
+<div id="buttons">
+  <input type="button" id="Login" value="Login">
+</div>
+<script>
+
+window.onload = function(){
+	//canvas init
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	
+	//canvas dimensions
+	var W = window.innerWidth;
+	var H = window.innerHeight;
+	canvas.width = W;
+	canvas.height = H;
+	
+	//snowflake particles
+	var mp = 20; //max particles
+	var particles = [];
+	for(var i = 0; i < mp; i++)
+	{
+		particles.push({
+			x: Math.random()*W, //x-coordinate
+			y: Math.random()*H, //y-coordinate
+			r: Math.random()*4+1, //radius
+			d: Math.random()*mp //density
+		})
+	}
+	
+	//Lets draw the flakes
+	function draw()
+	{
+		ctx.clearRect(0, 0, W, H);
+
+		
+		ctx.fillStyle = "rgba(255, 25, 25, 0.5)";
+		ctx.beginPath();
+		for(var i = 0; i < mp; i++)
+		{
+			var p = particles[i];
+			ctx.moveTo(p.x, p.y);
+			ctx.bezierCurveTo(p.x,p.y+10,p.x+10,p.y+10,p.x+10,p.y);
+                                                ctx.bezierCurveTo(p.x+20,p.y,p.x+20,p.y-10,p.x+10,p.y-10);
+                                               ctx.bezierCurveTo(p.x+10,p.y-20,p.x,p.y-20,p.x,p.y-10);
+                                                ctx.bezierCurveTo(p.x-10,p.y-10,p.x-10,p.y,p.x,p.y);
+                                                ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, true);
+ctx.arc(p.x+10, p.y, p.r, 0, Math.PI*2, true);
+ctx.arc(p.x, p.y-10, p.r, 0, Math.PI*2, true);
+ctx.arc(p.x+10, p.y-10, p.r, 0, Math.PI*2, true);                                                 
+		}
+//ctx.fillStyle = "rgba(25, 25, 25, 0.8)";
+ctx.moveTo(-20,700);
+ctx.bezierCurveTo(-20,550,460,550,460,600);
+ctx.bezierCurveTo(360,550,860,500,860,600);
+ctx.bezierCurveTo(860,575,1460,550,1460,700);
+ctx.strokeStyle="rgba(255,25,25,0.5)";
+ctx.rect(400,500,475,100);
+ctx.rect(420,400,435,100);
+//ctx.fillStyle = "rgba(25, 25, 25, 0.8)";
+//ctx.beginPath();
+ctx.moveTo(600,350);
+ctx.lineTo(620,400);
+ctx.lineTo(660,400);
+ctx.lineTo(680,350);
+ctx.stroke();
+ctx.moveTo(550,350);
+ctx.lineTo(570,400);
+ctx.lineTo(610,400);
+ctx.lineTo(630,350);
+ctx.stroke();
+ctx.moveTo(650,350);
+ctx.lineTo(670,400);
+ctx.lineTo(710,400);
+ctx.lineTo(730,350);
+ctx.stroke();
+var j=0,i=-20;
+for(i;i<=150;i++)
+{
+ctx.moveTo(570+i, 350);
+			ctx.bezierCurveTo(570+i,360-j,580+i,370-j,580+i,350-j);
+                                                ctx.bezierCurveTo(590+i,350-j,590+i,340-j,580+i,340-j);
+                                               ctx.bezierCurveTo(580+i,330-j,570+i,330-j,570+i,340-j);
+                                                ctx.bezierCurveTo(560+i,340-j,560+i,350-j,570+i,350-j);
+i=i+20;
+}
+var j=20,i=-10;
+for(i;i<=150;i++)
+{
+ctx.moveTo(570+i, 350);
+			ctx.bezierCurveTo(570+i,360-j,580+i,370-j,580+i,350-j);
+                                                ctx.bezierCurveTo(590+i,350-j,590+i,340-j,580+i,340-j);
+                                               ctx.bezierCurveTo(580+i,330-j,570+i,330-j,570+i,340-j);
+                                                ctx.bezierCurveTo(560+i,340-j,560+i,350-j,570+i,350-j);
+i=i+20;
+}
+var j=40,i=0;
+for(i;i<=130;i++)
+{
+ctx.moveTo(570+i, 350);
+			ctx.bezierCurveTo(570+i,360-j,580+i,370-j,580+i,350-j);
+                                                ctx.bezierCurveTo(590+i,350-j,590+i,340-j,580+i,340-j);
+                                               ctx.bezierCurveTo(580+i,330-j,570+i,330-j,570+i,340-j);
+                                                ctx.bezierCurveTo(560+i,340-j,560+i,350-j,570+i,350-j);
+i=i+20;
+}
+var j=60,i=10;
+for(i;i<=130;i++)
+{
+ctx.moveTo(570+i, 350);
+			ctx.bezierCurveTo(570+i,360-j,580+i,370-j,580+i,350-j);
+                                                ctx.bezierCurveTo(590+i,350-j,590+i,340-j,580+i,340-j);
+                                               ctx.bezierCurveTo(580+i,330-j,570+i,330-j,570+i,340-j);
+                                                ctx.bezierCurveTo(560+i,340-j,560+i,350-j,570+i,350-j);
+i=i+20;
+}
+var j=80,i=20;
+for(i;i<=110;i++)
+{
+ctx.moveTo(570+i, 350);
+			ctx.bezierCurveTo(570+i,360-j,580+i,370-j,580+i,350-j);
+                                                ctx.bezierCurveTo(590+i,350-j,590+i,340-j,580+i,340-j);
+                                               ctx.bezierCurveTo(580+i,330-j,570+i,330-j,570+i,340-j);
+                                                ctx.bezierCurveTo(560+i,340-j,560+i,350-j,570+i,350-j);
+i=i+20;
+}
+var j=100,i=30;
+for(i;i<=110;i++)
+{
+ctx.moveTo(570+i, 350);
+			ctx.bezierCurveTo(570+i,360-j,580+i,370-j,580+i,350-j);
+                                                ctx.bezierCurveTo(590+i,350-j,590+i,340-j,580+i,340-j);
+                                               ctx.bezierCurveTo(580+i,330-j,570+i,330-j,570+i,340-j);
+                                                ctx.bezierCurveTo(560+i,340-j,560+i,350-j,570+i,350-j);
+i=i+20;
+}
+var j=120,i=40;
+for(i;i<=90;i++)
+{
+ctx.moveTo(570+i, 350);
+			ctx.bezierCurveTo(570+i,360-j,580+i,370-j,580+i,350-j);
+                                                ctx.bezierCurveTo(590+i,350-j,590+i,340-j,580+i,340-j);
+                                               ctx.bezierCurveTo(580+i,330-j,570+i,330-j,570+i,340-j);
+                                                ctx.bezierCurveTo(560+i,340-j,560+i,350-j,570+i,350-j);
+i=i+20;
+}
+var j=140,i=50;
+for(i;i<=90;i++)
+{
+ctx.moveTo(570+i, 350);
+			ctx.bezierCurveTo(570+i,360-j,580+i,370-j,580+i,350-j);
+                                                ctx.bezierCurveTo(590+i,350-j,590+i,340-j,580+i,340-j);
+                                               ctx.bezierCurveTo(580+i,330-j,570+i,330-j,570+i,340-j);
+                                                ctx.bezierCurveTo(560+i,340-j,560+i,350-j,570+i,350-j);
+i=i+20;
+}
+var j=160,i=60;
+for(i;i<=70;i++)
+{
+ctx.moveTo(570+i, 350);
+			ctx.bezierCurveTo(570+i,360-j,580+i,370-j,580+i,350-j);
+                                                ctx.bezierCurveTo(590+i,350-j,590+i,340-j,580+i,340-j);
+                                               ctx.bezierCurveTo(580+i,330-j,570+i,330-j,570+i,340-j);
+                                                ctx.bezierCurveTo(560+i,340-j,560+i,350-j,570+i,350-j);
+i=i+20;
+}
+
+
+
+ctx.closePath();
+document.getElementById('Login').addEventListener('click', function() {
+                       window.location="login.html";
+
+      }, false);
+//ctx.arc(300,350,200,0,Math.PI,true);
+//ctx.fillRect(260,390,800,150);
+//ctx.strokeRect(260,390,800,150);
+               ctx.shadowOffsetX = 2;   
+               ctx.shadowOffsetY = 2;   
+               ctx.shadowBlur = 4;   
+               ctx.shadowColor = "rgba(255,25,25,0.5)";
+
+//ctx.fillStyle = "rgba(25, 25, 25, 0.8)";
+
+
+		ctx.fill();
+		update();
+	}
+
+
+	
+	//Function to move the snowflakes
+	//angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
+	var angle = 0;
+	function update()
+	{
+		angle += 0.01;
+		for(var i = 0; i < mp; i++)
+		{
+			var p = particles[i];
+			//Updating X and Y coordinates
+			//We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
+			//Every particle has its own density which can be used to make the downward movement different for each flake
+			//Lets make it more random by adding in the radius
+			p.y += Math.cos(angle+p.d) + 1 + p.r/2;
+			p.x += Math.sin(angle) * 2;
+			
+			//Sending flakes back from the top when it exits
+			//Lets make it a bit more organic and let flakes enter from the left and right also.
+			if(p.x > W+5 || p.x < -5 || p.y > H)
+			{
+				if(i%3 > 0) //66.67% of the flakes
+				{
+					particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d};
+				}
+				else
+				{
+					//If the flake is exitting from the right
+					if(Math.sin(angle) > 0)
+					{
+						//Enter from the left
+						particles[i] = {x: -5, y: Math.random()*H, r: p.r, d: p.d};
+					}
+					else
+					{
+						//Enter from the right
+						particles[i] = {x: W+5, y: Math.random()*H, r: p.r, d: p.d};
+					}
+				}
+			}
+		}
+	}
+	
+	//animation loop
+	setInterval(draw, 33);
+}
+</script>
+</body>
+</html>

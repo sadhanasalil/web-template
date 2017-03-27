@@ -1,0 +1,31 @@
+<?Php
+$link=mysqli_connect("localhost","root","","project");
+if($link===false)
+{
+die("couldnot connnect".mysqli_connect_error());
+}
+
+
+//////////////////////////////////////
+$sql="select * from demo"; 
+$str ="<chart caption='Harry&#39;s SuperMart' subcaption='Monthly revenue for last year' xaxisname='Month' yaxisname='Amount' numberprefix='$' palettecolors='#008ee4' bgalpha='0' borderalpha='20' canvasborderalpha='0' useplotgradientcolor='0' plotborderalpha='10' placevaluesinside='1' rotatevalues='1' valuefontcolor='#ffffff' captionpadding='20' showaxislines='1' axislinealpha='25' divlinealpha='10'>
+";
+
+foreach ($dbo->query($sql) as $row) {
+$str .= "<set label=\'".$_row['month']."\'value=\'".$row['salary']."\' />\n";
+}
+$str.= "</chart>";
+//$str=nl2br($str);
+//echo htmlspecialchars($str); // remove this line if you are writing to file
+echo $str;
+///////////////////////////// 
+/// Write to file ////////////
+/*
+$file_name="testfile.xml"; // file name
+$fp = fopen ($file_name, "w"); 
+// Open the file in write mode, if file does not exist then it will be created.
+fwrite ($fp,$str); // entering data to the file
+fclose ($fp); // closing the file pointer
+chmod($file_name,0777); 
+*/
+?>

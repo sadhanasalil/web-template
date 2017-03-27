@@ -1,0 +1,18 @@
+/*Some basic CSS*/
+* {margin: 0; padding: 0;}
+/*To remove the scrollers*/
+#canvas {display: block;}
+#buttons {
+        background-color: #00FF00;
+         color: white;
+        padding: 15px 32px;
+        position: absolute;
+        top: 30px;
+        left: 580px;
+        font-size: 20px;
+      }
+      #buttons > input {
+        padding: 10px;
+        display: block;
+        margin-top: 5px;
+      }

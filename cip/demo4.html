@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<body>
+<svg width="1500" height="1500"
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<script type="text/ecmascript"><![CDATA[
+function changeimg(evt)
+{
+var svgobj=evt.target;
+alert("hi");
+svgobj.setAttribute('xlink:href','ima1.jpg');
+}]]>
+</script>
+
+<!--<image xlink:href='images.jpg' height='100'; width='108'
+onclick='changeimg(evt)'>
+<animateMotion dur="1s" repeatCount="indefinite"
+   path="m 0,0 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z" />
+</g>-->
+<!-- <rect style="fill:#FFFFFF;" height="900" width="900" y="0" x="0">
+  <animate fill="freeze" dur="10s" begin="0.1s" 
+        to="#F0F0F0" from="#FFFFFF" calMode="linear" attributeName="fill"/>
+</rect>-->
+<g>
+<circle cx="200" cy="100" r="50" fill="red">
+	<animate
+	    attributeName="fill"  
+	    begin="1s"  
+	    dur="10s"  
+	    values ="red; orange; yellow; green; blue; indigo; violet; red"
+	    repeatCount="indefinite"   
+	    />  
+      </circle>
+</g>
+
+</svg>
+</body>
+</html>

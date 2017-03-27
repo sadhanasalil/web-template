@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+<svg width="1500" height="1500">
+<g>
+	<path d="M100,200
+           C100,100  180,100  230,200"
+   fill="red" stroke="red" stroke-width="2px" />
+<path d="M100 200 L100 290 L190 290 C205,290 205,275 205,275 L205 275 L205 200 Z"
+   fill="red" stroke="red" stroke-width="2px" />
+<path d="M135,210
+           C135,250  190,250  190,210"
+   fill="red" stroke="red" stroke-width="2px" />
+<path fill="white">
+<animate attributeName="d" dur="2s" repeatCount="indefinite"
+values="M135,210
+           C110,290  170,290  190,210;
+M135,210
+           C135,250  190,250  190,210 "/>
+</path>
+
+<circle cx="135" cy="170" r="19" stroke="yellow" fill="yellow" ></circle>
+
+<circle cx="135" cy="170" r="10" >
+	<animate dur="3s" attributeName="r" values="10; 14; 10"
+	repeatCount="indefinite" /></circle>
+<circle cx="190" cy="170" r="15" stroke="yellow" fill="yellow" ></circle>
+<circle cx="190" cy="170" r="8" >
+	<animate dur="3s" attributeName="r" values="8; 12; 8"
+	repeatCount="indefinite" /></circle>
+<g>
+<circle cx="138" cy="170" r="3" stroke="white" fill="white"></circle>
+<circle cx="192" cy="170" r="3" stroke="white" fill="white"></circle>
+
+   <animateMotion dur="1s" repeatCount="indefinite"
+   path="m 0,0 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z" />
+</g>
+<animateTransform  calcMode="spline"
+  dur="3s" attributeName="transform"
+  type="rotate" repeatCount="indefinite"
+  keySplines="0.35 0 0.65 1; 0.35 0 0.65 1"
+values="2,0,2;-2,0,-2;2,0,2" />
+
+</g>
+<g> 
+
+<path d="M150,310 C20,310 20,350 150,350 C150,353 200,353 200,350 C350,350 350,307 200,310 C200,307 150,307 150,310" fill="deepskyblue" stroke="aqua"/>
+<circle cx="90" cy="330" r="14" stroke="black" fill="black"></circle>
+<circle cx="90" cy="330" r="10" stroke="white" fill="white"></circle>
+<circle cx="280" cy="330" r="14" stroke="red" fill="red"></circle>
+<circle cx="280" cy="330" r="10" stroke="black" fill="black"></circle>
+
+  <animateTransform  calcMode="spline"
+  dur="3s" attributeName="transform"
+  type="rotate" repeatCount="indefinite"
+  keySplines="0.35 0 0.65 1; 0.35 0 0.65 1"
+values="5,0,5;-5,0,-5;5,0,5" />
+<animateTransform  calcMode="spline"
+  dur="3s" attributeName="transform"
+  type="rotate" repeatCount="indefinite"
+  keySplines="0.35 0 0.65 1; 0.35 0 0.65 1"
+values="-5,0,-5;5,0,5;-5,0,-5" />
+  </g>
+</svg>
+</body>
+</html>

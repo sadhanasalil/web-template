@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>My first chart using FusionCharts Suite XT</title>
+<script type="text/javascript" src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
+<script type="text/javascript" src="http://static.fusioncharts.com/code/latest/themes/fusioncharts.theme.fint.js?cacheBust=56"></script>
+<script type="text/javascript">
+  FusionCharts.ready(function(){
+    var fusioncharts = new FusionCharts({
+    type: 'column2d',
+    renderAt: 'chart-container',
+    width: '500',
+    height: '300',
+    id: "rev-fc-chart",
+    dataFormat: 'json',
+    dataSource: {
+        "chart": {
+            "caption": "Student Average Statistics",
+            "subCaption": "Average",
+            "xAxisName": "name",
+            "yAxisName": "mark"
+        },
+ "data": [{
+            "label": "aaa",
+            "value": "90"
+        }, {
+            "label": "bbb",
+            "value": "81"
+        }, {
+            "label": "ccc",
+            "value": "72"
+        }, {
+            "label": "ddd",
+            "value": "55"
+        }, {
+            "label": "eee",
+            "value": "66"
+        }, {
+            "label": "fff",
+            "value": "73"
+        }, {
+            "label": "ggg",
+            "value": "68"
+        }, {
+            "label": "hhh",
+            "value": "62"
+        }, {
+            "label": "iii",
+            "value": "61"
+        }, {
+            "label": "jjj",
+            "value": "49"
+        }, {
+            "label": "kkk",
+            "value": "90"
+        }, {
+            "label": "lll",
+            "value": "73"
+        }]
+        
+    },
+    events: {
+        'beforeRender': function(evt, args) {
+            // creating div for theme controllers
+            var scriptElem, controllers = document.createElement('div'),
+                themeCollection = {
+                'zune': 'http://static.fusioncharts.com/code/latest/themes/fusioncharts.theme.zune.js',
+                'ocean': 'http://static.fusioncharts.com/code/latest/themes/fusioncharts.theme.ocean.js',
+                'carbon': 'http://static.fusioncharts.com/code/latest/themes/fusioncharts.theme.carbon.js'
+            };
+            for(var theme in themeCollection) {
+                scriptElem = document.createElement('script');
+                scriptElem.setAttribute('type', 'text/javascript');
+                scriptElem.setAttribute('src', themeCollection[theme]);
+                scriptElem.async = false;
+                args.container.parentNode.insertBefore(scriptElem, args.container.nextSibling);
+
+            }
+            // form radio buttons inside div
+            controllers.innerHTML = '<label><input type="radio" name="theme-options" id="fint-chckbx" value="zune"> Zune</label><label><input type="radio" name="theme-options" value="ocean"> Ocean</label><label><input type="radio" name="theme-options" value="carbon"> Carbon</label><label><input type="button" value="Apply Theme" id="set-theme"></label>';
+            controllers.setAttribute('id', 'controllers');
+
+            // setting css styles for controllers div
+            controllers.style.cssText = "font-family:'Helvetica Neue', Arial; font-size:14px; margin-left:90px;";
+
+            // setting css styles for labels inside controllers div
+            var labels = controllers.getElementsByTagName('label');
+            for (i = 0; i < labels.length; i++) {
+                labels[i].style.cssText = 'padding: 0 5px !important;';
+            }
+
+            args.container.appendChild(controllers);
+            //Button click handler
+            document.getElementById("set-theme").onclick = function() {
+                //Get name of the selected theme from radio
+                var radios = document.getElementsByName("theme-options"),
+                    len = radios && radios.length,
+                    isSelected, radElem, i;
+
+                for (i = 0; i < len; i += 1) {
+                    radElem = radios[i];
+                    isSelected = radElem && radios[i].checked;
+
+                    if (isSelected) {
+                        //Update chart theme
+                        FusionCharts.items["rev-fc-chart"].setChartAttribute('theme', radElem.value);
+                    }
+                }
+            }
+            
+        }
+    }
+}
+);
+    fusioncharts.render();
+});
+</script>
+</head>
+<body>
+  <div id="chart-container">FusionCharts XT will load here!</div>
+</body>
+</html>

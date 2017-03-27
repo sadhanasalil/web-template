@@ -1,0 +1,23 @@
+* {margin: 0; padding: 0;}
+
+body {
+	/*You can use any kind of background here.*/
+	background: white;
+}
+canvas {
+	display: block;
+}
+#buttons {
+        background-color: #FF1919;
+         color: white;
+        padding: 15px 32px;
+        position: absolute;
+        top: 30px;
+        left: 580px;
+        font-size: 20px;
+      }
+      #buttons > input {
+        padding: 10px;
+        display: block;
+        margin-top: 5px;
+      }
